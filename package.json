@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration=production",
+    "start": "npm runn serve:ssr",
+    "build": "npm run build:ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run home-experts:serve-ssr",
     "serve:ssr": "node dist/home-experts/server/main.js",
-    "build:ssr": "ng build && ng run home-experts:server",
+    "build:ssr": "ng build --prod && ng run home-experts:production",
     "prerender": "ng run home-experts:prerender"
   },
   "private": true,
